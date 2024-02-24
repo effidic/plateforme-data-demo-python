@@ -1,0 +1,16 @@
+# vscode
+.vscode
+
+# Config
+venv/
+.env
+
+# Poetry
+poetry.lock
+.poetry/
+logs/
+.idea/
+.pytest_cache
+
+utils/__pycache__/
+tests/__pycache__/
