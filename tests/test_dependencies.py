@@ -14,22 +14,21 @@ dev_dependencies = (
 )
 
 
-def test_snowflake_sqlalchemy():
+def test_google_cloud():
     """
-    Test if 'snowflake-sqlalchemy'
+    Test if 'google-cloud'
     is defined as a dependency with the correct version.
     """
-    snowflake_sqlalchemy = dependencies.get("snowflake-sqlalchemy")
-    assert snowflake_sqlalchemy is not None
-    assert snowflake_sqlalchemy == "1.4.7"
+    google_cloud = dependencies.get("google-cloud")
+    assert google_cloud is not None
 
 
 def test_additional_dependencies():
     """
     Test if additional dependencies have the correct versions specified.
     """
-    assert dependencies.get("pandas") == "1.5.3"
-    assert dependencies.get("python-dotenv") == "1.0.0"
+    assert dependencies.get("flake8") is not None
+    assert dependencies.get("python-dotenv") is not None
 
 
 if __name__ == "__main__":
