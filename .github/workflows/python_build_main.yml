@@ -44,4 +44,4 @@ jobs:
         run: |
           docker run --name my-container \
           europe-west1-docker.pkg.dev/plateforme-data-demo/effidic-registry/plateforme-data-demo-python:main \
-          python main.py
+          ls -ltra
