@@ -41,7 +41,4 @@ jobs:
         run: docker pull europe-west1-docker.pkg.dev/plateforme-data-demo/effidic-registry/plateforme-data-demo-python:main
   
       - name: Run Docker Image
-        run: |
-          docker run --name my-container \
-          europe-west1-docker.pkg.dev/plateforme-data-demo/effidic-registry/plateforme-data-demo-python:main \
-          ls -ltra
+        run: docker run europe-west1-docker.pkg.dev/plateforme-data-demo/effidic-registry/plateforme-data-demo-python:main
