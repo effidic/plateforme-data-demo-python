@@ -49,7 +49,7 @@ def stream_download_upload(source_url, bucket_name, destination_blob_name):
                 if chunk:  # Filtrer les keep-alive new chunks
                     blob_file.write(chunk)
 
-
+logger.info(conf.KEYFILE_PRIVATE_KEY)
 # pylint: disable-next=line-too-long
 chiffre_cle_2022_url = """https://opendata.datainfogreffe.fr/api/explore/v2.1/catalog/datasets/chiffres-cles-2022/exports/csv?lang=fr&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B"""
 infogreffe_bucket_name = "effidic-open-data"
