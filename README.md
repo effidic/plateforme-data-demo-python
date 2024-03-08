@@ -1,7 +1,9 @@
 # plateforme-data-demo-python
 
 
+## Liste des sources
 
+voir docs/sources.md
 
 ## Install
 
