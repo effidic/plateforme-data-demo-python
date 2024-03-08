@@ -28,6 +28,7 @@ jobs:
           tags: europe-west1-docker.pkg.dev/plateforme-data-demo/effidic-registry/plateforme-data-demo-python:main  # TODO
 
   deploy:
+    needs: build_and_push
     runs-on: ubuntu-latest
     steps:
       - name: Log in to Google Artifact Registry
