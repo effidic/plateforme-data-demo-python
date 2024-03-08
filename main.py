@@ -52,14 +52,14 @@ def stream_download_upload(source_url, bucket_name, destination_blob_name):
 logger.info(conf.KEYFILE_PRIVATE_KEY)
 logger.info(f"longueur : {len(conf.KEYFILE_PRIVATE_KEY)}")
 # pylint: disable-next=line-too-long
-chiffre_cle_2022_url = """https://opendata.datainfogreffe.fr/api/explore/v2.1/catalog/datasets/chiffres-cles-2022/exports/csv?lang=fr&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B"""
+chiffre_cle_2021_url = """https://opendata.datainfogreffe.fr/api/explore/v2.1/catalog/datasets/chiffres-cles-2021/exports/csv?lang=fr&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B"""
 infogreffe_bucket_name = "effidic-open-data"
-chiffre_cle_2022_destination_blob_name = "infogreffe/chiffre_cle_2022.csv"
+chiffre_cle_2021_destination_blob_name = "infogreffe/chiffre_cle_2021.csv"
 logger.info(
-    "Téléchargement de chiffre_cle_2022.csv et chargement en streaming dans le bucket %s",
+    "Téléchargement de chiffre_cle_2021.csv et chargement en streaming dans le bucket %s",
     infogreffe_bucket_name,
 )
 stream_download_upload(
-    chiffre_cle_2022_url, infogreffe_bucket_name, chiffre_cle_2022_destination_blob_name
+    chiffre_cle_2021_url, infogreffe_bucket_name, chiffre_cle_2021_destination_blob_name
 )
 logger.info("Téléchargement terminé")
