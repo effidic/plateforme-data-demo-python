@@ -5,8 +5,6 @@ import os
 
 from dotenv import load_dotenv
 
-load_dotenv(override=True)
-
 
 class Configuration:
     """
@@ -21,3 +19,7 @@ class Configuration:
     KEYFILE_CLIENT_X509_CERT_URL = os.environ.get("KEYFILE_CLIENT_X509_CERT_URL")
     KEYFILE_PRIVATE_KEY = os.environ.get("KEYFILE_PRIVATE_KEY")
     KEYFILE_PRIVATE_KEY_ID = os.environ.get("KEYFILE_PRIVATE_KEY_ID")
+    GCP_BUCKET_NAME = os.environ.get("GCP_BUCKET_NAME")
+
+load_dotenv(override=True)
+conf = Configuration()
