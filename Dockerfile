@@ -23,4 +23,4 @@ RUN poetry install
 
 ENTRYPOINT ["python3"]
 
-CMD ["/app/main.py"]
+CMD ["/app/src/main.py"]

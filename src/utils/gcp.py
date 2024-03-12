@@ -47,7 +47,7 @@ def stream_download_upload(source_url, bucket_name, destination_blob_name):
     storage_client = storage.Client(credentials=credentials)
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(destination_blob_name)
-    chunk_size=20 * 1024 * 1024
+    chunk_size=200 * 1024 * 1024
 
     blob.chunk_size = chunk_size
 
