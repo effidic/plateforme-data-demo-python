@@ -12,5 +12,5 @@ logs/
 .idea/
 .pytest_cache
 
-utils/__pycache__/
-tests/__pycache__/
+src/utils/__pycache__/
+src/tests/__pycache__/
