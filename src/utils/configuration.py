@@ -1,9 +1,13 @@
 """
 @author: sta
 """
+
 import os
 
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
+
+# Le chargement du dotenv doit ce faire avant la creation de la classe.
+load_dotenv(dotenv_path=find_dotenv(), override=True)
 
 
 class Configuration:
@@ -20,6 +24,3 @@ class Configuration:
     KEYFILE_PRIVATE_KEY = os.environ.get("KEYFILE_PRIVATE_KEY")
     KEYFILE_PRIVATE_KEY_ID = os.environ.get("KEYFILE_PRIVATE_KEY_ID")
     GCP_BUCKET_NAME = os.environ.get("GCP_BUCKET_NAME")
-
-load_dotenv(override=True)
-conf = Configuration()
