@@ -3,7 +3,7 @@ import requests
 from google.cloud import storage
 from google.oauth2 import service_account
 
-from utils.configuration import conf
+from utils.configuration import Configuration as conf
 from utils.logger import logger
 
 
