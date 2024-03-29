@@ -1,6 +1,7 @@
 """
 This module describe the tests of dependancies
 """
+
 import toml
 import pytest
 
@@ -8,10 +9,11 @@ import pytest
 pyproject_toml = toml.load("pyproject.toml")
 
 # Get the "dev-dependencies" section
-dependencies = pyproject_toml.get("tool", {}).get("poetry", {}).get("dependencies", {})
-dev_dependencies = (
-    pyproject_toml.get("tool", {}).get("poetry", {}).get("dev-dependencies", {})
-)
+dependencies = pyproject_toml.get("tool", {}).get("poetry", {})
+dependencies = dependencies.get("dependencies", {})
+
+dev_dependencies = pyproject_toml.get("tool", {}).get("poetry", {})
+dev_dependencies = dev_dependencies.get("dev-dependencies", {})
 
 
 def test_google_cloud():

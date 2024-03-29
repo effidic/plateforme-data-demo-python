@@ -1,5 +1,5 @@
 # Dockerfile
-FROM python:3.11-bookworm
+FROM mcr.microsoft.com/devcontainers/python:1-3.11-bookworm
 
 ENV PYTHONDONTWRITEBYTECODE 1
 
@@ -7,20 +7,15 @@ ARG TOKEN
 
 ENV VIRTUAL_ENV=/opt/venv
 
-WORKDIR /app
-
 RUN python3 -m venv $VIRTUAL_ENV
 
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-ENV PYTHONPATH $PYTHONPATH:/app
-
-COPY . /app
+# ENV PYTHONPATH $PYTHONPATH:/app
 
 RUN pip install poetry
-RUN poetry install
 
+# WORKDIR "/workspaces/plateforme-data-demo-python/"
 
-ENTRYPOINT ["python3"]
+# RUN poetry install --no-root
 
-CMD ["/app/src/main.py"]
