@@ -25,10 +25,10 @@ data_sources = [
     #     url="https://opendata.datainfogreffe.fr/api/explore/v2.1/catalog/datasets/chiffres-cles-2021/exports/csv?lang=fr&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B",
     #     destination_blob_name="infogreffe/chiffre_cle_2021.csv",
     # ),
-    # # Datasource(
-    # #     url="https://www.data.gouv.fr/fr/datasets/r/ba6a4e4c-aac6-4764-bbd2-f80ae345afc5",
-    # #     destination_blob_name="geo/GeolocalisationEtablissement_Sirene.csv",
-    # # ),
+    # Datasource(
+    #     url="https://www.data.gouv.fr/fr/datasets/r/ba6a4e4c-aac6-4764-bbd2-f80ae345afc5",
+    #     destination_blob_name="geo/GeolocalisationEtablissement_Sirene.csv",
+    # ),
     # Datasource(
     #     url="https://data.paysdelaloire.fr/api/explore/v2.1/catalog/datasets/120027016_base-sirene-v3-ss/exports/csv?lang=fr&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B",
     #     destination_blob_name="PDL/base-sirene-v3.csv",
@@ -41,10 +41,10 @@ data_sources = [
     #     url="https://data.paysdelaloire.fr/api/explore/v2.1/catalog/datasets/234400034_-bornes-de-recharge/exports/csv?lang=fr&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B",
     #     destination_blob_name="PDL/bornes-de-recharge.csv",
     # ),
-    # Datasource(
-    #     url="https://files.data.gouv.fr/geo-dvf/latest/csv/2023/departements/49.csv.gz",
-    #     destination_blob_name="immo/demande-valeur-fonciere-49.csv.gz",
-    # ),
+    Datasource(
+        url="https://files.data.gouv.fr/geo-dvf/latest/csv/2023/departements/49.csv.gz",
+        destination_blob_name="immo/demande-valeur-fonciere-49.csv.gz",
+    ),
     Datasource(
         url="../data/immo/mandats.csv",
         destination_blob_name="immo/mandats.csv",
